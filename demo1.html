@@ -1,0 +1,151 @@
+
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Doc</title>
+  </head>
+  <body>
+      <canvas id="canvas" width="500px" height="500px" style="background-color: whitesmoke;"></canvas>
+      <script>
+
+var canvas=document.getElementById('canvas');
+var snake,fruit;
+var c=canvas.getContext('2d');
+var  scale=10;
+var rows=canvas.width / scale;
+var coloumn=canvas.height / scale;
+var x=0,y=0,dx=1,dy ;
+var fx,fy;
+var by;
+
+function Snake(){
+    this.x =0;
+    this.y = 0;
+    this.dx=scale*1;
+    this.dy=0;
+    this.fx=fx;
+    this.fy=fy;
+this.scale=scale;
+    this.update = function() {
+       
+        if(this.x==canvas.width){
+            this.x=0;
+        }
+        if(this.y==canvas.height){
+            this.y=0;
+        }
+        if(this.x<0){
+            this.x=canvas.width;
+        
+        }
+        if(this.y<0){
+            this.y=canvas.height;
+        }
+        this.x=this.x+this.dx;
+        this.y=this.y+this.dy;;
+    }
+
+    this.draw = function(){ 
+
+        // c.clearRect(0,0,canvas.width,canvas.height);
+        // fruit.draw();
+        c.fillRect(this.x,this.y,10,10);
+    }
+    this.move=function(z){
+        // document.getElementById("demo").innerHTML = "The Unicode value is: " + z;
+        switch(z){
+            case 40 :
+                this.dx=0;
+                this.dy=scale*1;
+                break;
+            case 39 :
+                this.dy=0
+                this.dx=scale*1;
+                break;
+            case 37 :
+                this.dy=0;
+                this.dx=-scale*1;
+                break;
+            case 38 :
+                this.dx=0;
+                this.dy=-scale*1;
+                break;        
+        }
+    } 
+ 
+   
+}   
+
+snake=new Snake();
+
+
+function moving(){
+    var z;
+
+
+    var t=Math.floor(Math.random()*4)+1;
+    console.log(t);
+    switch(t){
+        case 1:
+            z=37;
+            break;
+        case 2:
+            z=38;
+            break;
+        case 3:
+            z=39;
+            break;
+        case 4:
+            z=40;
+            break;        
+    }
+    snake.move(z);
+
+}
+setInterval(moving, 100)
+function raju(){
+    requestAnimationFrame(raju);   
+     
+    snake.update();
+snake.draw();
+// c.clearRect(0,0,canvas.width,canvas.height);
+}
+  raju();
+
+//   document.addEventListener("keydown",function keycode(event){    
+// var z;
+//     // var z =event.which || event.keyCode;
+//     // console.log(z);
+//     for(var i=0;i<100;i++){
+//     var t=Math.floor(Math.random()*5);
+//     console.log(t);
+//     switch(t){
+//         case 1:
+//             z=37;
+//             break;
+//         case 2:
+//             z=38;
+//             break;
+//         case 3:
+//             z=39;
+//             break;
+//         case 4:
+//             z=40;
+//             break;        
+//     }
+//     snake.move(z);
+//     console.log(i);             
+//     }
+
+  
+// })
+
+
+
+
+
+
+      </script>
+  </body>
+  </html>

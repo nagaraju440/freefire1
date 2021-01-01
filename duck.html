@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck hunt game</title>
+</head>
+<body>
+    <!-- <div style="width:20px;height: 20px;border-radius: 50%;background-color: black;position: absolute;z-index:2;" id="mouse"></div> -->
+
+<!-- <img src="wings3.png" alt="" width="300px"  height="100px" style="position: absolute;border-radius: 90%;"> -->
+<!-- <button id="button" style="position: absolute;">click mee</button> -->
+<img src="forest.png" id="cloud" alt=""style="display: none;">
+<div id="score" style="text-align: center;position: absolute;font-size: 60px;margin-left: 40%;">score:0</div>
+<button id="button1" style="position: absolute;display: none;">
+    <img src="wings2.png" id="wings2" width="60px" height="60px" alt="" onclick="blast()" ondblclick="blast()"  >
+</button>
+<button id="button2" style="position: absolute;display: none;">
+<img src="wings3.png" id="wings3" width="60px" height="60px" alt="" onclick="blast()" ondblclick="blast()"  >
+
+</button>
+</button>
+<button id="button3" style="position: absolute;display: none;">
+<img src="birds1.png" id="birds1" width="60px" height="60px" alt="" onclick="blast()" ondblclick="blast()"  >
+
+</button>
+<button id="button4" style="position: absolute;display: none;">
+    <img src="birds2.png" id="birds2" width="60px" height="60px" alt="" onclick="blast()" ondblclick="blast()"  >
+    </button>
+</button>
+<button id="button5" style="position: absolute;display: none;">
+    <img src="birds3.png" id="birds2" width="60px" height="60px" alt="" onclick="blast()" ondblclick="blast()"  >
+    </button>
+</button>
+    <button id="button6" style="position: absolute;display: none;">
+        <img src="birds4.png" id="birds2" width="60px" height="60px" alt="" onclick="blast()" ondblclick="blast()"  >
+        </button>
+<canvas id="myCanvas" width="1350px" height="600px"  >
+        Your browser does not support the HTML5 canvas tag.
+<img src="dog1.png" id="dog1">
+<img src="dog2.png" id="dog2">
+<img src="eat.png" id="eat">
+
+        </canvas>
+        <script  src="duck.js"></script>
+</body>
+</html>

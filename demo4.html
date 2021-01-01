@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosuar gamee</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600px" height="300px"  style="border:15px solid rgb(188, 209, 187);background-color:rgb(201, 55, 55);">
+        Your browser does not support the HTML5 canvas tag.
+        <img src="dino1.png" id="din"  style="border-radius: 50%;display: block;"> 
+<img src="cloud.png" id="cloud" alt="" >
+<img src="birds.png" id="birds" alt="">
+
+        </canvas>
+        <script  >
+          var canvas=document.getElementById("myCanvas");
+          var c=canvas.getContext("2d");
+            var cloud=document.getElementById("cloud");
+            c.drawImage(cloud,100,100,50,50);
+            console.log( c.drawImage(cloud,100,100,50,50)); 
+        </script>
+</body>
+</html>

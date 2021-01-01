@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="500px" height="500px" style="background-color: whitesmoke;"></canvas>
+<!DOCTYPE html>
+
+    <script>
+var canvas=document.getElementById('canvas');
+var snake;
+var c=canvas.getContext('2d');
+var  x=0;y=0;
+
+function raju(){
+    requestAnimationFrame(raju);
+         c.clearRect(0,0,canvas.width,canvas.height);
+
+    c.fillRect(x,y,10,10);
+x=x+1;  
+}
+    raju();
+
+
+    </script>
+</body>
+</html>

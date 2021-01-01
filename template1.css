@@ -1,0 +1,28 @@
+/* .jha{
+    background-color: aqua;
+} */
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+ a:hover{
+    background-color: black;
+    color: white;
+}
+#n:hover{
+    background-color: rgb(212, 212, 212);
+}
+#na:hover{
+    background-color: whitesmoke;
+}
+#a:hover{
+    background-color: rgb(219, 214, 214);
+}
+#j:hover{
+    background-color: whitesmoke;
+}
+/* #jhan{
+font-size: 2px;
+} */
+

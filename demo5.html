@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clear ree ct</title>
+</head>
+<body>
+    <canvas id="canvas" width="600px" height="600px" style="border: 2px solid black"></canvas>4
+    <script>
+        var canvas=document.getElementById("canvas");
+        var c=canvas.getContext("2d");
+        var scale=10;
+function Snake(){
+    this.x =0;
+    this.y = 10;
+    this.dx=scale*1;
+    this.dy=0;
+
+
+this.scale=10;
+    this.update = function() {
+
+
+       
+        if(this.x==canvas.width){
+            this.x=0;
+        }
+        if(this.y==canvas.height){
+            this.y=0;
+        }
+        if(this.x<0){
+            this.x=canvas.width;
+        
+        }
+        if(this.y<0){
+            this.y=canvas.height;
+        }
+
+        this.x=this.x+this.dx;
+        this.y=this.y+this.dy;
+        // console.log(this.fx);
+        // console.log(this.fy);
+        if(this.x ==this.fx && this.y ==this.fy){
+            this.total++;
+
+            console.log(this.fx);
+            console.log(this.fy);
+            snake.food();
+            snake.fooddraw();
+
+        }
+        
+    }
+
+    this.draw = function(){ 
+        console.log(this.x,this.y);
+        c.clearRect(this.x-10,this.y,this.x,10);
+
+        // fruit.draw();
+
+        c.fillRect(this.x,this.y,10,10);
+
+    }
+    
+ 
+    
+}   
+
+snake=new Snake();
+
+setInterval(function(){
+    
+    snake.draw();
+
+    snake.update();
+
+},250);
+    </script>
+</body>
+</html>
